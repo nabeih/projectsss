@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نظام إدارة متجر الملابس - حل شامل للمخزون والمبيعات والفروع">
+    <title>متجر الأناقة | نظام إدارة متكامل</title>
+
+    <!-- Bootstrap 5 RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================================
+     NAVBAR
+============================================ -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">
+                <i class="fas fa-tshirt"></i>
+                <span>متجر الأناقة</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">المميزات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dashboards">اللوحات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">كيف يعمل</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">الباقات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">اتصل بنا</a></li>
+                </ul>
+
+                <div class="d-flex gap-2">
+                    <a href="#" class="btn btn-outline-light btn-sm">
+                        <i class="fas fa-sign-in-alt"></i> دخول
+                    </a>
+                    <a href="#" class="btn btn-warning btn-sm">
+                        <i class="fas fa-rocket"></i> ابدأ مجاناً
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+     HERO SECTION
+============================================ -->
+    <section class="hero-section" id="hero">
+        <div class="hero-overlay"></div>
+
+        <!-- أنماط زخرفية -->
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="hero-shape hero-shape-3"></div>
+
+        <div class="container position-relative">
+            <div class="row align-items-center min-vh-100">
+
+                <!-- النص -->
+                <div class="col-lg-6 text-white" data-aos="fade-left">
+                    <span class="hero-badge">
+                        <i class="fas fa-star"></i> النظام الأكثر تطوراً لعام 2026
+                    </span>
+
+                    <h1 class="hero-title">
+                        أدِر متجر ملابسك<br>
+                        <span class="text-gradient">بذكاء واحترافية</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        نظام متكامل لإدارة <strong>المخزون، المبيعات، المشتريات، الفروع، الموظفين</strong>
+                        والتقارير المالية. كل ما تحتاجه في لوحة تحكم واحدة.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="../store-dashboard/index.html" class="btn btn-warning btn-lg">
+                            <i class="fas fa-rocket"></i> ابدأ تجربة مجانية
+                        </a>
+                        <a href="#dashboards" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-play-circle"></i> شاهد اللوحات
+                        </a>
+                    </div>
+
+                    <!-- إحصائيات سريعة -->
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <h3>+500</h3>
+                            <p>متجر نشط</p>
+                        </div>
+                        <div class="hero-stat">
+                            <h3>+1M</h3>
+                            <p>عملية بيع</p>
+                        </div>
+                        <div class="hero-stat">
+                            <h3>99.9%</h3>
+                            <p>وقت تشغيل</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- صورة/موك أب -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="hero-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="mockup-title">لوحة التحكم</span>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-stat-row">
+                                <div class="mockup-stat bg-purple">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <div>
+                                        <small>مبيعات اليوم</small>
+                                        <strong>$2,450</strong>
+                                    </div>
+                                </div>
+                                <div class="mockup-stat bg-green">
+                                    <i class="fas fa-chart-line"></i>
+                                    <div>
+                                        <small>صافي الربح</small>
+                                        <strong>$1,200</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mockup-chart">
+                                <div class="mockup-bar" style="height: 60%"></div>
+                                <div class="mockup-bar" style="height: 80%"></div>
+                                <div class="mockup-bar" style="height: 45%"></div>
+                                <div class="mockup-bar" style="height: 90%"></div>
+                                <div class="mockup-bar" style="height: 70%"></div>
+                                <div class="mockup-bar" style="height: 85%"></div>
+                                <div class="mockup-bar" style="height: 55%"></div>
+                            </div>
+                            <div class="mockup-list">
+                                <div class="mockup-item">
+                                    <span class="mockup-dot green"></span>
+                                    <span>قميص أطفال M</span>
+                                    <strong class="text-success">+$45</strong>
+                                </div>
+                                <div class="mockup-item">
+                                    <span class="mockup-dot blue"></span>
+                                    <span>فستان بناتي S</span>
+                                    <strong class="text-success">+$75</strong>
+                                </div>
+                                <div class="mockup-item">
+                                    <span class="mockup-dot orange"></span>
+                                    <span>حذاء رياضي</span>
+                                    <strong class="text-success">+$120</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Wave -->
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,64 C480,140 960,0 1440,64 L1440,120 L0,120 Z" fill="#f8fafc" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ============================================
+     FEATURES SECTION
+============================================ -->
+    <section class="features-section" id="features">
+        <div class="container">
+
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-badge">المميزات</span>
+                <h2 class="section-title">كل ما تحتاجه <span class="text-gradient">في مكان واحد</span></h2>
+                <p class="section-subtitle">
+                    نظام شامل يغطي كل احتياجات متجر الملابس من الألف إلى الياء
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon bg-purple">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h4>إدارة المخزون</h4>
+                        <p>تحكم كامل بمنتجاتك، مقاسات، ألوان، كميات، مع تنبيهات ذكية للمخزون المنخفض.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="feature-card">
+                        <div class="feature-icon bg-green">
+                            <i class="fas fa-cash-register"></i>
+                        </div>
+                        <h4>نقاط البيع (POS)</h4>
+                        <p>شاشة كاشير سريعة وسهلة، مع دعم الباركود، الطباعة الفورية، وتعدد طرق الدفع.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon bg-blue">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4>إدارة الفروع</h4>
+                        <p>أضف فروعاً لا محدودة، عيّن مديرين وكاشيرين، وتابع أداء كل فرع بشكل منفصل.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="feature-card">
+                        <div class="feature-icon bg-orange">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>إدارة الموظفين</h4>
+                        <p>صلاحيات دقيقة لكل موظف، تتبع الأداء، وتقارير المبيعات لكل كاشير.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon bg-red">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>تقارير ذكية</h4>
+                        <p>تقارير مفصلة عن المبيعات، الأرباح، المخزون، وأداء الفروع والموظفين.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+                    <div class="feature-card">
+                        <div class="feature-icon bg-teal">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>إدارة المشتريات</h4>
+                        <p>تتبع الموردين، حساباتهم، أوامر الشراء، والمستحقات بشكل احترافي.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     DASHBOARDS SECTION
+============================================ -->
+    <section class="dashboards-section" id="dashboards">
+        <div class="container">
+
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-badge">اللوحات</span>
+                <h2 class="section-title">ثلاث لوحات <span class="text-gradient">لكل دور</span></h2>
+                <p class="section-subtitle">
+                    كل مستخدم يرى ما يحتاجه فقط، بأمان وسهولة
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- لوحة المالك -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="dashboard-card">
+                        <div class="dashboard-preview">
+                            <div class="dashboard-bar" style="background: #4f46e5"></div>
+                            <div class="dashboard-content">
+                                <i class="fas fa-crown"></i>
+                                <span>Owner Dashboard</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-info">
+                            <span class="dashboard-tag" style="background: #4f46e5">اللوحة الرئيسية</span>
+                            <h4>لوحة المالك 👑</h4>
+                            <p>
+                                رؤية شاملة لكل الفروع، التقارير المالية، أداء الموظفين،
+                                والمخزون الكلي.
+                            </p>
+                            <ul class="dashboard-list">
+                                <li><i class="fas fa-check-circle text-success"></i> كل الفروع</li>
+                                <li><i class="fas fa-check-circle text-success"></i> كل التقارير</li>
+                                <li><i class="fas fa-check-circle text-success"></i> كل الموظفين</li>
+                                <li><i class="fas fa-check-circle text-success"></i> كل الإعدادات</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- لوحة الكاشير -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="dashboard-card highlighted">
+                        <div class="dashboard-preview">
+                            <div class="dashboard-bar" style="background: #10b981"></div>
+                            <div class="dashboard-content">
+                                <i class="fas fa-cash-register"></i>
+                                <span>POS Screen</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-info">
+                            <span class="dashboard-tag" style="background: #10b981">الأكثر استخداماً</span>
+                            <h4>لوحة الكاشير 💳</h4>
+                            <p>
+                                شاشة سريعة وسهلة للبيع، بحث بالباركود، طباعة الفاتورة،
+                                وإدارة صندوقه اليومي.
+                            </p>
+                            <ul class="dashboard-list">
+                                <li><i class="fas fa-check-circle text-success"></i> بيع سريع</li>
+                                <li><i class="fas fa-check-circle text-success"></i> بحث بالباركود</li>
+                                <li><i class="fas fa-check-circle text-success"></i> طباعة فورية</li>
+                                <li><i class="fas fa-check-circle text-success"></i> صندوق خاص</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- لوحة الموقع -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="dashboard-card">
+                        <div class="dashboard-preview">
+                            <div class="dashboard-bar" style="background: #f59e0b"></div>
+                            <div class="dashboard-content">
+                                <i class="fas fa-globe"></i>
+                                <span>Website</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-info">
+                            <span class="dashboard-tag" style="background: #f59e0b">للعملاء</span>
+                            <h4>لوحة الموقع 🌐</h4>
+                            <p>
+                                واجهة أنيقة للعملاء لتسوق المنتجات، إتمام الطلبات،
+                                ورفع إشعارات التحويل.
+                            </p>
+                            <ul class="dashboard-list">
+                                <li><i class="fas fa-check-circle text-success"></i> تصفح المنتجات</li>
+                                <li><i class="fas fa-check-circle text-success"></i> سلة تسوق</li>
+                                <li><i class="fas fa-check-circle text-success"></i> رفع إشعار دفع</li>
+                                <li><i class="fas fa-check-circle text-success"></i> تتبع الطلب</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     HOW IT WORKS
+============================================ -->
+    <section class="how-section" id="how-it-works">
+        <div class="container">
+
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-badge">كيف يعمل</span>
+                <h2 class="section-title">ابدأ في <span class="text-gradient">4 خطوات بسيطة</span></h2>
+            </div>
+
+            <div class="row g-4 mt-4">
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h5>سجّل حسابك</h5>
+                        <p>أنشئ حساب متجرك في دقائق معدودة</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h5>أضف منتجاتك</h5>
+                        <p>أدخل المنتجات، المقاسات، والأسعار</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h5>أضف موظفيك</h5>
+                        <p>عيّن كاشيرين ومديرين لكل فرع</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-card">
+                        <div class="step-number">04</div>
+                        <div class="step-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h5>ابدأ البيع</h5>
+                        <p>افتح الكاشير وابدأ البيع فوراً</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     WHY US
+============================================ -->
+    <section class="why-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800" alt="متجر ملابس"
+                        class="img-fluid rounded-4 shadow-lg">
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="section-badge">لماذا نحن؟</span>
+                    <h2 class="section-title mb-4">
+                        نظام <span class="text-gradient">احترافي وآمن</span>
+                    </h2>
+
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <h6>أمان عالي</h6>
+                            <p>بياناتك محمية بتشفير متقدم، وصلاحيات دقيقة لكل مستخدم</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                        <div>
+                            <h6>سرعة فائقة</h6>
+                            <p>أداء سريع في كل العمليات، حتى مع آلاف المنتجات</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <div>
+                            <h6>يعمل على كل الأجهزة</h6>
+                            <p>متوافق مع الكمبيوتر، التابلت، والجوال</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fas fa-headset"></i></div>
+                        <div>
+                            <h6>دعم فني 24/7</h6>
+                            <p>فريق دعم جاهز لمساعدتك في أي وقت</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     PRICING
+============================================ -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-badge">الباقات</span>
+                <h2 class="section-title">اختر <span class="text-gradient">الباقة المناسبة</span></h2>
+                <p class="section-subtitle">باقات مرنة تناسب جميع أحجام المتاجر</p>
+            </div>
+
+            <div class="row g-4 mt-4 justify-content-center">
+
+                <!-- باقة البداية -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h4>الباقة الأساسية</h4>
+                            <p>للمتاجر الصغيرة</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">19</span>
+                            <span class="period">/شهر</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check text-success"></i> فرع واحد</li>
+                            <li><i class="fas fa-check text-success"></i> 500 منتج</li>
+                            <li><i class="fas fa-check text-success"></i> 3 موظفين</li>
+                            <li><i class="fas fa-check text-success"></i> تقارير أساسية</li>
+                            <li><i class="fas fa-times text-muted"></i> موقع إلكتروني</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary w-100">ابدأ الآن</a>
+                    </div>
+                </div>
+
+                <!-- الباقة الاحترافية -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card featured">
+                        <div class="pricing-ribbon">الأكثر شعبية</div>
+                        <div class="pricing-header">
+                            <h4>الباقة الاحترافية</h4>
+                            <p>للمتاجر المتوسطة</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">49</span>
+                            <span class="period">/شهر</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check text-success"></i> 5 فروع</li>
+                            <li><i class="fas fa-check text-success"></i> 5000 منتج</li>
+                            <li><i class="fas fa-check text-success"></i> 15 موظف</li>
+                            <li><i class="fas fa-check text-success"></i> تقارير متقدمة</li>
+                            <li><i class="fas fa-check text-success"></i> موقع إلكتروني</li>
+                        </ul>
+                        <a href="#" class="btn btn-warning w-100">ابدأ الآن</a>
+                    </div>
+                </div>
+
+                <!-- باقة الشركات -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h4>باقة الشركات</h4>
+                            <p>للمتاجر الكبيرة</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">99</span>
+                            <span class="period">/شهر</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check text-success"></i> فروع غير محدودة</li>
+                            <li><i class="fas fa-check text-success"></i> منتجات غير محدودة</li>
+                            <li><i class="fas fa-check text-success"></i> موظفين غير محدودين</li>
+                            <li><i class="fas fa-check text-success"></i> تقارير مخصصة</li>
+                            <li><i class="fas fa-check text-success"></i> دعم مخصص</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary w-100">اتصل بنا</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <a href="markiting.html" class="btn btn-success">
+                <h2>تعرف اكثر على <span class="text-gradient">الباقات المناسبة</span></h2>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================
+     CONTACT / CTA
+============================================ -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-box" data-aos="zoom-in">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-7">
+                        <h2 class="text-white mb-3">جاهز لتطوير متجرك؟ 🚀</h2>
+                        <p class="text-white-50 mb-0">
+                            ابدأ تجربتك المجانية لمدة 14 يوم، بدون بطاقة ائتمانية.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
+                        <a href="#" class="btn btn-warning btn-lg">
+                            <i class="fas fa-rocket"></i> ابدأ الآن مجاناً
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-phone"></i> اتصل بنا
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     FOOTER
+============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <i class="fas fa-tshirt"></i>
+                        <span>متجر الأناقة</span>
+                    </div>
+                    <p class="footer-desc">
+                        نظام إدارة متكامل لمتاجر الملابس، يساعدك على إدارة المخزون،
+                        المبيعات، الفروع، والموظفين بكفاءة عالية.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="footer-title">الروابط</h6>
+                    <ul class="footer-links">
+                        <li><a href="#hero">الرئيسية</a></li>
+                        <li><a href="#features">المميزات</a></li>
+                        <li><a href="#pricing">الباقات</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="footer-title">المميزات</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">المخزون</a></li>
+                        <li><a href="#">المبيعات</a></li>
+                        <li><a href="#">التقارير</a></li>
+                        <li><a href="#">الفروع</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <h6 class="footer-title">تواصل معنا</h6>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> الرياض، السعودية</li>
+                        <li><i class="fas fa-phone"></i> +966 50 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@store.com</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p class="mb-0">
+                    © 2026 <strong>متجر الأناقة</strong>. جميع الحقوق محفوظة.
+                    صُنع بـ <i class="fas fa-heart text-danger"></i> في السعودية
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
